@@ -208,7 +208,7 @@ export const PORTFOLIO_CONTENT: Record<LanguageCode, PortfolioContent> = {
     footer: {
       tagline: 'Senior .NET & Angular Software Consultant • Building Reliable Business Systems Since 2007.',
       linkedinText: 'Connect on LinkedIn',
-      rights: '© 2026 Pravinkumar Birajdar. All rights reserved.'
+      rights: '© 2026-2027 Pravinkumar Birajdar. All rights reserved.'
     }
   },
   hi: {

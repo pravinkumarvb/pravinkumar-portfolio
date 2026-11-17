@@ -1,0 +1,83 @@
+<header class="py-5 text-white" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+  <div class="container py-lg-4">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-8">
+        <span class="badge bg-primary bg-opacity-25 text-info border border-info border-opacity-25 px-3 py-2 rounded-pill mb-3 fw-semibold">
+          <i class="fa-solid fa-shield-halved me-2"></i>{{ langService.content().hero.badge }}
+        </span>
+
+        <h1 class="display-5 fw-bold mb-3 lh-sm">
+          {{ langService.content().hero.title }}
+        </h1>
+
+        <p class="lead text-light opacity-75 mb-4 pe-lg-4">
+          {{ langService.content().hero.subtitle }}
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mb-5">
+          <a href="#contact" class="btn btn-primary btn-lg px-4 fw-semibold shadow">
+            <i class="fa-solid fa-paper-plane me-2"></i>{{ langService.content().hero.primaryCta }}
+          </a>
+
+          <a href="#projects" class="btn btn-outline-light btn-lg px-4 fw-semibold">
+            {{ langService.content().hero.secondaryCta }}
+          </a>
+
+          <a
+            [href]="socials.linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-info btn-lg px-4 fw-semibold">
+            <i class="fa-brands fa-linkedin me-2"></i>{{ langService.content().hero.linkedinCta }}
+          </a>
+        </div>
+
+        <!-- Trust Stats Row -->
+        <div class="row g-3 pt-3 border-top border-secondary border-opacity-25">
+          @for (stat of langService.content().hero.trustStats; track stat.label) {
+            <div class="col-4">
+              <div class="h3 fw-bold text-info mb-0">{{ stat.value }}</div>
+              <div class="small text-light opacity-75">{{ stat.label }}</div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Right-side Architectural Credibility Card -->
+      <div class="col-lg-4">
+        <div class="card bg-dark border-secondary border-opacity-50 text-light shadow-lg rounded-4">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center gap-3 mb-3 pb-3 border-bottom border-secondary border-opacity-25">
+              <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center fw-bold fs-4 text-white" style="width: 54px; height: 54px;">
+                PB
+              </div>
+              <div>
+                <h2 class="h6 fw-bold mb-0">{{ langService.content().nav.brand }}</h2>
+                <small class="text-info">Senior .NET & Angular Architect</small>
+              </div>
+            </div>
+
+            <ul class="list-unstyled mb-0 small d-grid gap-2">
+              <li class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-success"></i>
+                <span>ASP.NET Core 9 & Clean Architecture</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-success"></i>
+                <span>Windows Desktop POS & ERP (.NET / C#)</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-success"></i>
+                <span>Angular 18 & High-Speed SQL Server</span>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-success"></i>
+                <span>Automated Backups & Zero Data Loss</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

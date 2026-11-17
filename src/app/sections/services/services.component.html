@@ -1,0 +1,31 @@
+<section id="services" class="py-5 bg-white">
+  <div class="container py-lg-3">
+    <div class="text-center mx-auto mb-5" style="max-width: 720px;">
+      <h2 class="fw-bold mb-2">{{ langService.content().services.heading }}</h2>
+      <p class="text-muted mb-0">{{ langService.content().services.subheading }}</p>
+    </div>
+
+    <div class="row g-4">
+      @for (item of langService.content().services.items; track item.title) {
+        <div class="col-md-4">
+          <div class="card h-100 border shadow-sm rounded-4">
+            <div class="card-body p-4 d-flex flex-column">
+              <div
+                class="rounded-3 bg-primary bg-opacity-10 text-primary d-inline-flex align-items-center justify-content-center mb-3"
+                style="width: 52px; height: 52px;">
+                <i [class]="item.icon + ' fs-4'"></i>
+              </div>
+
+              <h3 class="h5 fw-bold mb-2">{{ item.title }}</h3>
+              <p class="text-secondary small flex-grow-1 mb-3">{{ item.desc }}</p>
+
+              <div class="pt-3 border-top">
+                <span class="badge bg-light text-dark border fw-semibold">{{ item.tech }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
